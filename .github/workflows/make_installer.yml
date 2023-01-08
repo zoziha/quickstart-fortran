@@ -30,6 +30,8 @@ jobs:
           wget
           unzip
           mingw-w64-x86_64-openblas
+          mingw-w64-x86_64-ninja
+          mingw-w64-x86_64-meson
           
     - name: Fetch Mingw-w64
       shell: msys2 {0}
@@ -91,6 +93,13 @@ jobs:
         cp ./mingw64/lib/libopenblas.dll.a ./mingw64/lib/liblapack.dll.a
         mkdir ./mingw64/share/licenses
         cp -r /mingw64/share/licenses/OpenBLAS ./mingw64/share/licenses/
+
+    - name: Fetch Meson
+      shell: msys2 {0}
+      run: |
+        mkdir Meson
+        cp /mingw64/bin/meson ./mingw64/bin/
+        cp /mingw64/bin/ninja ./mingw64/bin/
 
     - name: Generate installer
       run: makensis quickstart-fortran-installer.nsi
