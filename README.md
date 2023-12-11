@@ -13,11 +13,11 @@ __Note: the installer takes a little while to startup due to it size, please be 
 - Installs locally, __no adminstrator account__ required
 - Optionally add everything to the PATH for the local user
 - Includes:
-  - GCC-GFortran 12.2.0
-  - Fortran Package Manager v0.8.2
+  - GCC-GFortran 13.2.0
+  - Fortran Package Manager v0.9.0
   - Git for Windows v2.35.2 (_needed for fpm_)
-  - OpenBLAS (BLAS/LAPACK) v0.3.20-1
-  - GNU make v4.3
+  - OpenBLAS (BLAS/LAPACK) v0.3.24-1
+  - GNU make v4.4.1
 - Extra utility commands
   - `intel-setvars` to initialise the Intel OneAPI environment (if installed)
   - `setup-stdlib` to build and install the latest version of the Fortran Standard Library 
