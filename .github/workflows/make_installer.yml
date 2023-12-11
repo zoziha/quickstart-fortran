@@ -53,11 +53,11 @@ jobs:
       with:
         fpm-version: 'v0.8.0'
 
-    - name: Build fpm from source with OpenMP
+    - name: Build fpm from source
       run: |
         mkdir fpm
         gfortran --version
-        fpm run -C fpm-src --profile release --flag "-fopenmp --static" --runner copy -- ..\fpm\
+        fpm run -C fpm-src --profile release --flag "--static" --runner copy -- ..\fpm\
 
     - name: Remove fpm src
       shell: msys2 {0}
